@@ -1,2 +1,3 @@
 FROM docker.elastic.co/elasticsearch/elasticsearch:7.15.0
-ADD ./jvm.conf /usr/share/elasticsearch/config/jvm.options.d/
+ENV discovery.type="single-node"
+ENV ES_JAVA_OPTS="-Xms1g -Xmx1g"
